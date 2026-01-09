@@ -7,7 +7,7 @@ A simple dice game where **Player 1 (you)** plays against **Player 2 (PC)**.
 ## Live Demo
 
 You can try the project online here: 
-- [Vercel live demo](https://github.com/yyukar/diceGameReact)
+- [Vercel live demo](https://dice-game-react-topaz.vercel.app)
 
 ---
 
