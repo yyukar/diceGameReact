@@ -1,0 +1,293 @@
+:root {
+  color-scheme: dark;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #2f343d;
+  color: #f3f4f6;
+}
+
+.container {
+  width: min(980px, 100%);
+  padding: 24px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 24px;
+  font-size: 56px;
+  letter-spacing: 0.5px;
+}
+
+.grid {
+  display: flex;
+  gap: 64px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.player {
+  width: 280px;
+}
+
+.playerLabel {
+  color: #3dd6c6;
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.diceBox {
+  width: 190px;
+  height: 190px;
+  border-radius: 18px;
+  background: #7f1d1d;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+.diceImg {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.nameInput {
+  margin-top: 10px;
+  width: 180px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #4b5563;
+  background: #111827;
+  color: #f3f4f6;
+  outline: none;
+}
+
+.btn {
+  margin: 18px auto 8px;
+  display: block;
+  width: min(420px, 100%);
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+  background: #10b981;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.resultText {
+  margin-top: 10px;
+  font-size: 22px;
+  min-height: 28px;
+}
+
+.muted {
+  margin-top: 6px;
+  opacity: 0.85;
+  min-height: 20px;
+}
+
+.sideBySide {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 14px;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .sideBySide {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: rgba(17, 24, 39, 0.55);
+  border: 1px solid rgba(75, 85, 99, 0.45);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.panelTitle {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.scoreGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.scoreItem {
+  background: rgba(0, 0, 0, .25);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.scoreKey {
+  opacity: 0.8;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.scoreVal {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.btnGhost {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid rgba(75, 85, 99, 0.6);
+  color: #f3f4f6;
+  cursor: pointer;
+}
+
+.btnGhost:hover {
+  background: rgba(255, 255, 255, .06);
+}
+
+.historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.historyItem {
+  display: grid;
+  grid-template-columns: 110px 1fr 70px;
+  gap: 10px;
+  align-items: center;
+  background: rgba(0, 0, 0, .22);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.historyTime {
+  opacity: 0.75;
+  font-size: 12px;
+}
+
+.historyRoll {
+  font-weight: 700;
+}
+
+.historyOutcome {
+  text-align: right;
+  font-weight: 900;
+}
+
+.settingsRow {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .settingsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.settingsItem {
+  background: rgba(0, 0, 0, .22);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.settingsKey {
+  opacity: 0.8;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.settingsVal {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.toggleGroup {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.toggleBtn {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(75, 85, 99, 0.6);
+  background: transparent;
+  color: #f3f4f6;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.toggleBtn.active {
+  background: rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.6);
+}
+
+.hint {
+  margin-top: 8px;
+  opacity: 0.75;
+  font-size: 12px;
+}
+
+.stack {
+  display: grid;
+  gap: 14px;
+}
+
+.summary {
+  text-align: left;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.summaryItem {
+  background: rgba(0, 0, 0, .22);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.summaryKey {
+  opacity: 0.8;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.summaryVal {
+  font-size: 16px;
+  font-weight: 900;
+}
